@@ -26,9 +26,9 @@ public class ContactRestController {
         List<Contact> allContacts = contactService.getAllContacts();
         return allContacts;
     }
-
+// Edit Functionality
     @GetMapping("/contact/{contactId}")
-    public Contact getContactById(@PathVariable Integer contactId){
+    public Contact getContactById(@PathVariable(value="contactId") Integer contactId){
         return contactService.getContactById(contactId);
     }
 

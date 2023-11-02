@@ -19,7 +19,7 @@ public class ContactServiceImpl implements ContactService{
         contact.setActiveSw("Y");
         contact = contactRepository.save(contact);
 
-//        UUID.randomUUID().toString();
+//        UUID.randomUUID().toString();// Random Uid generation
          if (contact.getContactId()!=null)
          return "Contact Saved";
          else
@@ -42,7 +42,7 @@ public class ContactServiceImpl implements ContactService{
         }
         return null;
     }
-
+//Update Logics
     @Override
     public String updateContact(Contact contact) {
        if(contactRepository.existsById(contact.getContactId())) {
